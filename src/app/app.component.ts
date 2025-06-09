@@ -1,10 +1,9 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import {LeafletModule} from '@bluehalo/ngx-leaflet';
 import {
   Control,
-  control, icon, Icon,
-  latLng, latLngBounds, LayerGroup,
+  icon, Icon,
+  latLng, LayerGroup,
   LeafletEvent,
   Map, marker,
   tileLayer,
@@ -31,21 +30,21 @@ export class AppComponent {
   showElectronic = true;
   showOres = true;
 
-  AtlasMap = tileLayer('/assets/mapStyles/styleAtlas/{z}/{x}/{y}.jpg', {
+  AtlasMap = tileLayer('assets/mapStyles/styleAtlas/{z}/{x}/{y}.jpg', {
     minZoom: 0,
     maxZoom: 5,
     noWrap: true,
     id: 'AtlasStyle map',
     // errorTileUrl: '/assets/mapStyles/styleAtlas/empty.jpg'
   });
-  GridMap = tileLayer('/assets/mapStyles/styleGrid/{z}/{x}/{y}.png', {
+  GridMap = tileLayer('assets/mapStyles/styleGrid/{z}/{x}/{y}.png', {
     minZoom: 0,
     maxZoom: 5,
     noWrap: true,
     id: 'GridStyle map',
     // errorTileUrl: '/assets/mapStyles/styleGrid/empty.png'
   });
-  SatelliteMap = tileLayer('/assets/mapStyles/styleSatelite/{z}/{x}/{y}.jpg', {
+  SatelliteMap = tileLayer('assets/mapStyles/styleSatelite/{z}/{x}/{y}.jpg', {
     minZoom: 0,
     maxZoom: 5,
     noWrap: true,
