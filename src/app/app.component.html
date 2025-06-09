@@ -1,5 +1,33 @@
+<div class="p-4 flex flex-col space-y-4 bg-white shadow-md rounded-lg z-10 absolute top-20 left-6">
+  <button
+    (click)="toggleElectronic()"
+    class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition"
+  >
+    <img src="/assets/icons/electronic.png" alt="Icone électronique" class="w-6 h-6 rounded" />
+    <span>Électronique</span>
+    <span
+      class="w-3 h-3 rounded-full"
+      [ngClass]="showElectronic ? 'bg-green-500' : 'bg-red-500'"
+    ></span>
+  </button>
+
+  <button
+    (click)="toggleOres()"
+    class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition"
+  >
+    <img src="/assets/icons/ores.png" alt="Icone minerais" class="w-6 h-6 rounded" />
+    <span>Minerais</span>
+    <span
+      class="w-3 h-3 rounded-full"
+      [ngClass]="showOres ? 'bg-green-500' : 'bg-red-500'"
+    ></span>
+  </button>
+</div>
+
+
+
 <div
-  class="map"
+  class="map z-0"
   leaflet
   [leafletOptions]="options"
   [leafletLayersControl]="layersControl"

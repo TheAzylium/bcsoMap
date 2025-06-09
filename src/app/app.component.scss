@@ -15,3 +15,75 @@
   font-style: italic;
   color: #333;
 }
+
+.map-controls {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  background: rgba(255,255,255,0.9);
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+/* style des boutons */
+.map-controls button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0.25rem 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.map-controls button:hover {
+  background: #f0f0f0;
+}
+
+/* état actif */
+.map-controls button.active {
+  background: #0066cc;
+  border-color: #005bb5;
+  color: #fff;
+}
+
+/* icônes */
+.map-controls .icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* assure que la carte prend tout l'espace */
+.full-map {
+  height: 100vh;
+  width: 100%;
+}
+
+.marker-label {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.ore-label {
+  background-color: #d4f7d4;  /* vert très clair */
+  color: #2b662b;             /* vert foncé pour le texte */
+}
+
+/* spécifique aux Composants → bleu clair */
+.electronic-label {
+  background-color: #d4e9f7;  /* bleu très clair */
+  color: #1a3f5a;             /* bleu foncé pour le texte */
+}
+
