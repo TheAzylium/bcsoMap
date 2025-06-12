@@ -1,84 +1,75 @@
 export const Drugs: { lat: number; lng: number; name: string }[] = [
-  {
-    lat
-      :
-      -56.340901204199085,
-    lng
-      :
-      12.875976562500002,
-    name: '13 Mirror Park Boulevard',
-  },
-  {
-    lat
-      :
-      -54.31652324025827,
-    lng
-      :
-      8.349609375000002,
-    name: '985 Mirror Park Boulevard',
-  },
-  {
-    lat
-      :
-      -57.20771009775018,
-    lng
-      :
-      12.436523437500002,
-    name: '2 Bridge Street',
-  },
-  {
-    lat
-      :
-      -60.19615576604439,
-    lng
-      :
-      19.907226562500004,
-    name: '98 Mirror Park Boulevard',
-  },
-  {
-    lat
-      :
-      -55.65279803318956,
-    lng
-      :
-      0.26367187500000006,
-    name: '3197 Elgin Avenue',
-  },
-  {
-    lat
-      :
-      -59.57885104663186,
-    lng
-      :
-      -33.35449218750001,
-    name: '378 Palomino Avenue',
-  },
-  {
-    lat
-      :
-      -57.421294392094055,
-    lng
-      :
-      -13.139648437500002,
-    name: '129 Alta Street'
-  },
-  {
-    lat
-      :
-      -65.05360170595502,
-    lng
-      :
-      -31.508789062500004,
-    name: '321 Vespucci Boulevard'
-  },
-  {
-    lat
-      :
-      -54.85131525968608,
-    lng
-      :
-      -15.732421875000002,
-    name: '985 Hawick Avenue'
-  },
+  // MIRROR PARK
+  { lat: -56.340901204199085, lng: 12.875976562500002, name: '13 Mirror Park Boulevard',},
+  { lat: -54.31652324025827, lng: 8.349609375000002, name: '985 Mirror Park Boulevard',},
+  { lat: -57.20771009775018, lng: 12.436523437500002, name: '2 Bridge Street',},
+  { lat: -60.19615576604439, lng: 19.907226562500004, name: '98 Mirror Park Boulevard',},
+  // LS Nord
+  { lat: -55.65279803318956, lng: 0.26367187500000006, name: '3197 Elgin Avenue',},
+  { lat: -59.57885104663186, lng: -33.35449218750001, name: '378 Palomino Avenue',},
+  { lat: -57.421294392094055, lng: -13.139648437500002, name: '129 Alta Street'},
+  { lat: -65.05360170595502, lng: -31.508789062500004, name: '321 Vespucci Boulevard'},
+  { lat: -54.85131525968608, lng: -15.732421875000002, name: '985 Hawick Avenue'},
+  // { lat: -55.97379820507658, lng: -6.1962890625, name: '365 Power Street' },
+  // { lat: -46.80005944678731, lng: -7.207031250000001, name: '36 Clinton Avenue' },
+  // { lat: -49.38237278700955, lng: 4.7900390625, name: '172 Clinton Avenue' },
+  // { lat: -57.61010702068388, lng: -29.399414062500004, name: '923 Carcer Way' },
+  // { lat: -61.95961583829658, lng: -56.25000000000001, name: '49 Marathon Avenue' },
+  // { lat: -59.866883195210214, lng: -57.39257812500001, name: '1596 Boulevard Del Perro' },
+  // { lat: -58.904645703019995, lng: -7.778320312500001, name: '1592 Occupation Avenue' },
+  // { lat: -57.891497352710324, lng: -13.271484375000002, name: '1654 Occupation Avenue' },
+  // { lat: -39.84228602074339, lng: -70.40039062500001, name: '126 North Rockford Drive' },
+  // { lat: -54.85131525968608, lng: -40.82519531250001, name: '195 Mad Wayne Thunder Drive' },
+  // { lat: -53.409531853086435, lng: -30.629882812500004, name: '409 Milton Road' },
+  // { lat: -54.69923352848138, lng: -4.086914062500001, name: '360 Spanish Avenue' },
+  // { lat: -47.42808726171426, lng: -30.937500000000004, name: '359 Milton Road' },
+  // { lat: 13.66733825965496, lng: 19.16015625, name: '67 Procopio Drive' },
+  { lat: -55.97130778916543, lng: -5.800781250000001, name: '365 Power Street' },
+  { lat: -46.437952737853415, lng: -7.954101562500001, name: '36 Clinton Avenue' },
+  { lat: -49.23921163555691, lng: 3.7792968750000004, name: '172 Clinton Avenue' },
+  { lat: -57.774591698117256, lng: -29.531250000000004, name: '923 Carcer Way' },
+  { lat: -61.980332599455785, lng: -56.6455078125, name: '49 Marathon Avenue' },
+  { lat: -59.57892146794743, lng: -57.30468750000001, name: '1596 Boulevard Del Perro' },
+  { lat: -59.198509791226016, lng: -7.734375000000001, name: '1592 Occupation Avenue' },
+  { lat: -58.05470549781871, lng: -13.0078125, name: '1654 Occupation Avenue' },
+  { lat: -40.178979572999715, lng: -69.82910156250001, name: '126 North Rockford Drive' },
+  { lat: -54.57214227491552, lng: -40.51757812500001, name: '195 Mad Wayne Thunder Drive' },
+  { lat: -53.69670647530323, lng: -30.498046875000004, name: '409 Milton Road' },
+  { lat: -55.15376626853556, lng: -1.0546875000000002, name: '360 Spanish Avenue' },
+  { lat: -47.84265762816536, lng: -30.717773437500004, name: '359 Milton Road' },
+  { lat: -66.75724984139227, lng: -6.679687500000001, name: '164 Strawberry Avenue' },
+  { lat: -65.25670649344259, lng: -5.756835937500001, name: '68 Strawberry Avenue' },
+  { lat: -67.55894799883033, lng: -10.766601562500002, name: '1546 Vespucci Boulevard' },
+  { lat: -64.99793920061401, lng: -11.733398437500002, name: '324 San Andreas Avenue' },
+  { lat: -66.87834504307976, lng: -15.556640625000002, name: '170 Power Street' },
+
+
+  { lat: -69.7333343903359, lng: -30.937500000000004, name: '21 Calais Avenue' },
+  { lat: -66.58321725728175, lng: -32.95898437500001, name: '12 Lindsay Circus' },
+  { lat: -65.6787828183299, lng: -41.51781562500001, name: '9674 South Rockford Drive' },
+  { lat: -67.54216668838531, lng: -45.615234375, name: '35 Prosperity Street' },
+  { lat: -61.75233128411637, lng: -57.70019531250001, name: '17 Marathon Avenue' },
+  { lat: -70.14036427207168, lng: -4.877929687500001, name: '11 Capital Avenue' },
+  { lat: -72.03328927451817, lng: -21.313476562500004, name: '59 Innocence Boulevard' },
+  //
+
+  { lat: 78.22451306101968, lng: -13.183593750000002, name: '67 Procopio Drive' },
+  { lat: 77.14739081482773, lng: -10.678710937500002, name: '2965 Paleto Boulevard' },
+  { lat: 31.615965936476076, lng: 35.77148437500001, name: '1 Panorama Drive' },
+  { lat: 40.01078714046552, lng: 26.674804687500004, name: '1 Lesbos Lane' },
+  { lat: 38.75408327579141, lng: 26.806640625000004, name: '54 Algonquin Boulevard' },
+  { lat: 25.760319754713887, lng: -9.272460937500002, name: '387 Joshua Road' },
+  { lat: 11.6522364041154, lng: -4.7900390625, name: '124 Senora Road' },
+  { lat: 19.559790136497412, lng: -28.1689453125, name: '380 Route 68' },
+  { lat: 49.1242192485914, lng: 57.04101562500001, name: '3 East Joshua Road' },
+  { lat: 54.36775852406841, lng: 64.59960937500001, name: '984 Joshua Road' },
+  { lat: 58.07787626787517, lng: 35.46386718750001, name: '4 Grapeseed Main Street' },
+  { lat: 59.64554025144323, lng: 33.22265625000001, name: '7 Grapeseed Main Street' },
+  { lat: 3.908098881894123, lng: -89.07714843750001, name: '1 Route 68' },
+  { lat: 51.26191485308451, lng: -79.18945312500001, name: '21 Great Ocean Avenue' },
+  { lat: -28.9600886880068, lng: -105.77636718750001, name: '97 Great Ocean Highway' },
+  { lat: -40.84706035607122, lng: -52.16308593750001, name: '224 North Sheldon Avenue' },
+  { lat: -42.52069952914967, lng: -25.7080078125, name: '391 Didion Drive' },
+  { lat: -45.55252525134013, lng: -28.608398437500004, name: '39 Cox Way' }
   ]
 
