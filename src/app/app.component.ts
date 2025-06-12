@@ -11,6 +11,7 @@ import {
 import {Electronic} from './markers/electronic';
 import {Ores} from './markers/ores';
 import {NgClass} from '@angular/common';
+import {Drugs} from './markers/drugs';
 
 
 @Component({
@@ -26,9 +27,11 @@ export class AppComponent {
   map: Map
   electronic: LayerGroup = new LayerGroup();
   ores: LayerGroup = new LayerGroup();
+  drugs: LayerGroup = new LayerGroup();
 
   showElectronic = true;
   showOres = true;
+  showDrugs = true;
 
   AtlasMap = tileLayer('assets/mapStyles/styleAtlas/{z}/{x}/{y}.jpg', {
     minZoom: 0,
@@ -71,8 +74,13 @@ export class AppComponent {
     overlays: {},
   };
 
-  clickEvent(event: LeafletEvent): void {
+  clickEvent(event:any): void {
     console.log(event);
+    const marker = `{ lat: ${event.latlng.lat}, lng: ${event.latlng.lng}, name: '' }`
+    navigator.clipboard.writeText(marker).then(() => {
+      console.log('Copié', marker);
+    })
+    console.log(marker);
   }
   onMapReady(map: Map): void {
     this.map = map;
@@ -88,7 +96,8 @@ export class AppComponent {
     legend.addTo(this.map);
 
     this.setElectronic();
-    this.setOres()
+    this.setOres();
+    this.setDrugs();
   }
 
   private setElectronic() {
@@ -142,6 +151,31 @@ export class AppComponent {
     this.map.addLayer(this.ores);
   }
 
+  private setDrugs() {
+    Drugs.forEach(m => {
+      this.drugs.addLayer(
+        marker(latLng(m.lat, m.lng), {
+          title: m.name,
+          icon: icon({
+            ...Icon.Default.prototype.options,
+            iconUrl: 'assets/icons/drugs.png',
+            shadowUrl: 'assets/marker-shadow.png'
+          })
+        }).bindTooltip(
+          m.name,
+          {
+            permanent: true,
+            direction: 'right',
+            offset: [10, 0],
+            className: 'marker-label ore-drugs'
+          }
+        )
+      );
+    })
+    this.map.addLayer(this.drugs);
+
+  }
+
   toggleElectronic() {
     this.showElectronic = !this.showElectronic;
     if (this.showElectronic) {
@@ -157,6 +191,15 @@ export class AppComponent {
       this.map.addLayer(this.ores);
     } else {
       this.map.removeLayer(this.ores);
+    }
+  }
+
+  toggleDrugs() {
+    this.showDrugs = !this.showDrugs;
+    if (this.showDrugs) {
+      this.map.addLayer(this.drugs);
+    } else {
+      this.map.removeLayer(this.drugs);
     }
   }
 }
