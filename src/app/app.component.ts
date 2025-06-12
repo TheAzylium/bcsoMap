@@ -108,7 +108,8 @@ export class AppComponent {
           icon: icon({
             ...Icon.Default.prototype.options,
             iconUrl: 'assets/icons/electronic.png',
-            shadowUrl: 'assets/marker-shadow.png'
+            shadowUrl: 'assets/marker-shadow.png',
+            iconSize: [32, 32],
           })
         }).bindTooltip(
           m.name,
@@ -133,7 +134,8 @@ export class AppComponent {
           icon: icon({
             ...Icon.Default.prototype.options,
             iconUrl: 'assets/icons/ores.png',
-            shadowUrl: 'assets/marker-shadow.png'
+            shadowUrl: 'assets/marker-shadow.png',
+            iconSize: [32, 32],
 
           }),
 
@@ -159,7 +161,8 @@ export class AppComponent {
           icon: icon({
             ...Icon.Default.prototype.options,
             iconUrl: 'assets/icons/drugs.png',
-            shadowUrl: 'assets/marker-shadow.png'
+            shadowUrl: 'assets/marker-shadow.png',
+            iconSize: [32, 32],
           })
         }).bindTooltip(
           m.name,
