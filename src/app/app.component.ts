@@ -1,30 +1,21 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {LeafletModule} from '@bluehalo/ngx-leaflet';
-import {
-  Control,
-  icon, Icon,
-  latLng, LayerGroup,
-  LeafletEvent,
-  Map, marker,
-  tileLayer,
-} from 'leaflet';
-import {Electronic} from './markers/electronic';
-import {Ores} from './markers/ores';
-import {NgClass} from '@angular/common';
-import {Drugs} from './markers/drugs';
-
+import { Component, ViewEncapsulation } from '@angular/core';
+import { LeafletModule } from '@bluehalo/ngx-leaflet';
+import { Control, icon, Icon, latLng, LayerGroup, LeafletMouseEvent, Map, marker, tileLayer } from 'leaflet';
+import { Electronic } from './markers/electronic';
+import { Ores } from './markers/ores';
+import { NgClass } from '@angular/common';
+import { Drugs } from './markers/drugs';
 
 @Component({
   selector: 'app-root',
   imports: [LeafletModule, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  encapsulation: ViewEncapsulation.None   // ← ajoutez ceci
-
+  encapsulation: ViewEncapsulation.None, // ← ajoutez ceci
 })
 export class AppComponent {
   title = 'BCSOMAP';
-  map: Map
+  map: Map;
   electronic: LayerGroup = new LayerGroup();
   ores: LayerGroup = new LayerGroup();
   drugs: LayerGroup = new LayerGroup();
@@ -55,7 +46,6 @@ export class AppComponent {
     // errorTileUrl: '/assets/mapStyles/styleSatelite/empty.jpg'
   });
 
-
   options = {
     layers: [this.AtlasMap],
     zoom: 3,
@@ -74,18 +64,15 @@ export class AppComponent {
     overlays: {},
   };
 
-  clickEvent(event:any): void {
-    console.log(event);
-    const marker = `{ lat: ${event.latlng.lat}, lng: ${event.latlng.lng}, name: '' }`
+  clickEvent(event: LeafletMouseEvent): void {
+    const marker = `{ lat: ${event.latlng.lat}, lng: ${event.latlng.lng}, name: '' }`;
     navigator.clipboard.writeText(marker).then(() => {
       console.log('Copié', marker);
-    })
-    console.log(marker);
+    });
   }
   onMapReady(map: Map): void {
     this.map = map;
 
-    // @ts-ignore
     const legend = new Control({ position: 'bottomright' });
     legend.onAdd = () => {
       const div = document.createElement('div');
@@ -101,7 +88,7 @@ export class AppComponent {
   }
 
   private setElectronic() {
-    Electronic.forEach(m => {
+    Electronic.forEach((m) => {
       this.electronic.addLayer(
         marker(latLng(m.lat, m.lng), {
           title: m.name,
@@ -110,24 +97,20 @@ export class AppComponent {
             iconUrl: 'assets/icons/electronic.png',
             shadowUrl: 'assets/marker-shadow.png',
             iconSize: [32, 32],
-          })
-        }).bindTooltip(
-          m.name,
-          {
-            permanent: true,
-            direction: 'right',
-            offset: [10, 0],
-            className: 'marker-label electronic-label'
-
-          }
-        )
+          }),
+        }).bindTooltip(m.name, {
+          permanent: true,
+          direction: 'right',
+          offset: [10, 0],
+          className: 'marker-label electronic-label',
+        }),
       );
     });
     this.map.addLayer(this.electronic);
   }
 
   private setOres() {
-    Ores.forEach(m => {
+    Ores.forEach((m) => {
       this.ores.addLayer(
         marker(latLng(m.lat, m.lng), {
           title: m.name,
@@ -136,25 +119,20 @@ export class AppComponent {
             iconUrl: 'assets/icons/ores.png',
             shadowUrl: 'assets/marker-shadow.png',
             iconSize: [32, 32],
-
           }),
-
-        }).bindTooltip(
-          m.name,
-          {
-            permanent: true,
-            direction: 'right',
-            offset: [10, 0],
-            className: 'marker-label ore-label'
-          }
-        )
+        }).bindTooltip(m.name, {
+          permanent: true,
+          direction: 'right',
+          offset: [10, 0],
+          className: 'marker-label ore-label',
+        }),
       );
     });
     this.map.addLayer(this.ores);
   }
 
   private setDrugs() {
-    Drugs.forEach(m => {
+    Drugs.forEach((m) => {
       this.drugs.addLayer(
         marker(latLng(m.lat, m.lng), {
           title: m.name,
@@ -163,20 +141,16 @@ export class AppComponent {
             iconUrl: 'assets/icons/drugs.png',
             shadowUrl: 'assets/marker-shadow.png',
             iconSize: [32, 32],
-          })
-        }).bindTooltip(
-          m.name,
-          {
-            permanent: true,
-            direction: 'right',
-            offset: [10, 0],
-            className: 'marker-label ore-drugs'
-          }
-        )
+          }),
+        }).bindTooltip(m.name, {
+          permanent: true,
+          direction: 'right',
+          offset: [10, 0],
+          className: 'marker-label ore-drugs',
+        }),
       );
-    })
+    });
     this.map.addLayer(this.drugs);
-
   }
 
   toggleElectronic() {

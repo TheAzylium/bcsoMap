@@ -40,7 +40,6 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/leaflet/dist/leaflet.css"
-
             ],
             "scripts": []
           },
@@ -105,8 +104,22 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }

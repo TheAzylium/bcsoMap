@@ -5,38 +5,21 @@
   >
     <img src="assets/icons/electronic.png" alt="Icone électronique" class="w-6 h-6 rounded" />
     <span>Électronique</span>
-    <span
-      class="w-3 h-3 rounded-full"
-      [ngClass]="showElectronic ? 'bg-green-500' : 'bg-red-500'"
-    ></span>
+    <span class="w-3 h-3 rounded-full" [ngClass]="showElectronic ? 'bg-green-500' : 'bg-red-500'"></span>
   </button>
 
-  <button
-    (click)="toggleOres()"
-    class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition"
-  >
+  <button (click)="toggleOres()" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition">
     <img src="assets/icons/ores.png" alt="Icone minerais" class="w-6 h-6 rounded" />
     <span>Minerais</span>
-    <span
-      class="w-3 h-3 rounded-full"
-      [ngClass]="showOres ? 'bg-green-500' : 'bg-red-500'"
-    ></span>
+    <span class="w-3 h-3 rounded-full" [ngClass]="showOres ? 'bg-green-500' : 'bg-red-500'"></span>
   </button>
 
-  <button
-    (click)="toggleDrugs()"
-    class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition"
-  >
+  <button (click)="toggleDrugs()" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition">
     <img src="assets/icons/drugs.png" alt="Icone Drogues" class="w-6 h-6 rounded" />
     <span>Drogues</span>
-    <span
-      class="w-3 h-3 rounded-full"
-      [ngClass]="showDrugs ? 'bg-green-500' : 'bg-red-500'"
-    ></span>
+    <span class="w-3 h-3 rounded-full" [ngClass]="showDrugs ? 'bg-green-500' : 'bg-red-500'"></span>
   </button>
 </div>
-
-
 
 <div
   class="map z-0"
@@ -44,4 +27,5 @@
   [leafletOptions]="options"
   [leafletLayersControl]="layersControl"
   (leafletClick)="clickEvent($event)"
-  (leafletMapReady)="onMapReady($event)"></div>
+  (leafletMapReady)="onMapReady($event)"
+></div>

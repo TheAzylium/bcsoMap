@@ -1,29 +1,13 @@
 export const Drugs: { lat: number; lng: number; name: string }[] = [
-  // MIRROR PARK
-  { lat: -56.340901204199085, lng: 12.875976562500002, name: '13 Mirror Park Boulevard',},
-  { lat: -54.31652324025827, lng: 8.349609375000002, name: '985 Mirror Park Boulevard',},
-  { lat: -57.20771009775018, lng: 12.436523437500002, name: '2 Bridge Street',},
-  { lat: -60.19615576604439, lng: 19.907226562500004, name: '98 Mirror Park Boulevard',},
-  // LS Nord
-  { lat: -55.65279803318956, lng: 0.26367187500000006, name: '3197 Elgin Avenue',},
-  { lat: -59.57885104663186, lng: -33.35449218750001, name: '378 Palomino Avenue',},
-  { lat: -57.421294392094055, lng: -13.139648437500002, name: '129 Alta Street'},
-  { lat: -65.05360170595502, lng: -31.508789062500004, name: '321 Vespucci Boulevard'},
-  { lat: -54.85131525968608, lng: -15.732421875000002, name: '985 Hawick Avenue'},
-  // { lat: -55.97379820507658, lng: -6.1962890625, name: '365 Power Street' },
-  // { lat: -46.80005944678731, lng: -7.207031250000001, name: '36 Clinton Avenue' },
-  // { lat: -49.38237278700955, lng: 4.7900390625, name: '172 Clinton Avenue' },
-  // { lat: -57.61010702068388, lng: -29.399414062500004, name: '923 Carcer Way' },
-  // { lat: -61.95961583829658, lng: -56.25000000000001, name: '49 Marathon Avenue' },
-  // { lat: -59.866883195210214, lng: -57.39257812500001, name: '1596 Boulevard Del Perro' },
-  // { lat: -58.904645703019995, lng: -7.778320312500001, name: '1592 Occupation Avenue' },
-  // { lat: -57.891497352710324, lng: -13.271484375000002, name: '1654 Occupation Avenue' },
-  // { lat: -39.84228602074339, lng: -70.40039062500001, name: '126 North Rockford Drive' },
-  // { lat: -54.85131525968608, lng: -40.82519531250001, name: '195 Mad Wayne Thunder Drive' },
-  // { lat: -53.409531853086435, lng: -30.629882812500004, name: '409 Milton Road' },
-  // { lat: -54.69923352848138, lng: -4.086914062500001, name: '360 Spanish Avenue' },
-  // { lat: -47.42808726171426, lng: -30.937500000000004, name: '359 Milton Road' },
-  // { lat: 13.66733825965496, lng: 19.16015625, name: '67 Procopio Drive' },
+  { lat: -56.340901204199085, lng: 12.875976562500002, name: '13 Mirror Park Boulevard' },
+  { lat: -54.31652324025827, lng: 8.349609375000002, name: '985 Mirror Park Boulevard' },
+  { lat: -57.20771009775018, lng: 12.436523437500002, name: '2 Bridge Street' },
+  { lat: -60.19615576604439, lng: 19.907226562500004, name: '98 Mirror Park Boulevard' },
+  { lat: -55.65279803318956, lng: 0.26367187500000006, name: '3197 Elgin Avenue' },
+  { lat: -59.57885104663186, lng: -33.35449218750001, name: '378 Palomino Avenue' },
+  { lat: -57.421294392094055, lng: -13.139648437500002, name: '129 Alta Street' },
+  { lat: -65.05360170595502, lng: -31.508789062500004, name: '321 Vespucci Boulevard' },
+  { lat: -54.85131525968608, lng: -15.732421875000002, name: '985 Hawick Avenue' },
   { lat: -55.97130778916543, lng: -5.800781250000001, name: '365 Power Street' },
   { lat: -46.437952737853415, lng: -7.954101562500001, name: '36 Clinton Avenue' },
   { lat: -49.23921163555691, lng: 3.7792968750000004, name: '172 Clinton Avenue' },
@@ -42,8 +26,6 @@ export const Drugs: { lat: number; lng: number; name: string }[] = [
   { lat: -67.55894799883033, lng: -10.766601562500002, name: '1546 Vespucci Boulevard' },
   { lat: -64.99793920061401, lng: -11.733398437500002, name: '324 San Andreas Avenue' },
   { lat: -66.87834504307976, lng: -15.556640625000002, name: '170 Power Street' },
-
-
   { lat: -69.7333343903359, lng: -30.937500000000004, name: '21 Calais Avenue' },
   { lat: -66.58321725728175, lng: -32.95898437500001, name: '12 Lindsay Circus' },
   { lat: -65.6787828183299, lng: -41.51781562500001, name: '9674 South Rockford Drive' },
@@ -51,8 +33,6 @@ export const Drugs: { lat: number; lng: number; name: string }[] = [
   { lat: -61.75233128411637, lng: -57.70019531250001, name: '17 Marathon Avenue' },
   { lat: -70.14036427207168, lng: -4.877929687500001, name: '11 Capital Avenue' },
   { lat: -72.03328927451817, lng: -21.313476562500004, name: '59 Innocence Boulevard' },
-  //
-
   { lat: 78.22451306101968, lng: -13.183593750000002, name: '67 Procopio Drive' },
   { lat: 77.14739081482773, lng: -10.678710937500002, name: '2965 Paleto Boulevard' },
   { lat: 31.615965936476076, lng: 35.77148437500001, name: '1 Panorama Drive' },
@@ -70,6 +50,5 @@ export const Drugs: { lat: number; lng: number; name: string }[] = [
   { lat: -28.9600886880068, lng: -105.77636718750001, name: '97 Great Ocean Highway' },
   { lat: -40.84706035607122, lng: -52.16308593750001, name: '224 North Sheldon Avenue' },
   { lat: -42.52069952914967, lng: -25.7080078125, name: '391 Didion Drive' },
-  { lat: -45.55252525134013, lng: -28.608398437500004, name: '39 Cox Way' }
-  ]
-
+  { lat: -45.55252525134013, lng: -28.608398437500004, name: '39 Cox Way' },
+];
